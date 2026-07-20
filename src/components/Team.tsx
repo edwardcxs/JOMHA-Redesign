@@ -12,7 +12,7 @@ interface TeamMemberProps {
 const teamRow1 = [
   { name: "Dr.Patrick Chabu", role: "Marketing Advisor", image: "/images/team/pat.jpeg" },
   { name: "Edward Kindo", role: "Technical Expert", image: "/images/team/edward-kindo.jpeg" },
-  { name: "Atish Niketan", role: "Asst. Technical Expert", image: "/images/team/atish niketan.jpeg" },
+  { name: "Atish Niketan", role: "Asst. Technical Expert", image: "/images/team/Atish3.jpeg" },
   { name: "Sikandar Samad", role: "Social Media Manager", image: "/images/team/sikandar.jpeg" },
   { name: "Lalita Samad", role: "Founder", image: "/images/team/lalita samad.jpeg" },
   { name: "Reeta Samad", role: "Co-Founder", image: "/images/team/reeta-samad.jpg" },
@@ -34,7 +34,7 @@ const teamRow2 = [
   { name: "Anshuman Acharya", role: "Service Staff", image: "/images/team/Ansu.jpeg" },
   { name: "Sangeeta Mohanty", role: "Service Staff", image: "/images/team/San.jpeg" },
   { name: "Sahid Lohar", role: "Service Staff", image: "/images/team/Sahid.jpeg" },
-  { name: "Shankar Mandal", role: "Interior Designer", image: "" },
+  { name: "Shankar Mandal", role: "Interior Designer", image: "/images/team/memoji.jpeg" },
   { name: "Debashis Kar", role: "Marketing Strategist | Running Notations", image: "/images/team/deba.jpg" },
 ];
 
