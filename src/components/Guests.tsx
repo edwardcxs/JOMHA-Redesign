@@ -42,7 +42,7 @@ export default function Guests() {
           quote="I spent some time at Jomha and tried their food, and it honestly made me so happy to see people in today’s modern era still carrying our culture with pride. The way they promote authentic tribal food-so healthy and rooted-is truly admirable, and I genuinely appreciate it."
         />
         <GuestCard
-          image="/images/guest/dashrath.webp"
+          image="/images/guest/das.jpg"
           initials="DG"
           name="Shri Dashrath Gagrai"
           role="MLA of Saraikela, Kharsawa, Jharkhand"
