@@ -50,11 +50,11 @@ export default function ReservationModal({ isOpen, onClose }: ReservationModalPr
               </p>
               
               <a 
-                href="tel:+911234567890" 
+                href="tel:+918260372068" 
                 className="flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-5 bg-richblack hover:bg-terracotta text-warmwhite text-[11px] font-bold tracking-superwide uppercase transition-all duration-150 rounded-none shadow-lg hover:shadow-terracotta/20 group"
               >
                 <i className="fa-solid fa-phone-volume group-hover:animate-bounce"></i>
-                +91 123 456 7890
+                +91 82603 72068
               </a>
             </div>
           </motion.div>
