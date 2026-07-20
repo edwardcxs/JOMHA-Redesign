@@ -58,12 +58,12 @@ export default function PageIntro() {
             />
 
             {/* Brand name */}
-            <span className="text-4xl sm:text-5xl font-bold tracking-megawide text-richblack leading-none uppercase">
+            <span className="text-xl sm:text-3xl md:text-5xl font-bold tracking-widest sm:tracking-megawide text-richblack leading-tight sm:leading-none uppercase text-center px-4">
               Welcome To JOMHA
             </span>
 
             {/* Tagline */}
-            <span className="text-[9px] sm:text-[10px] font-bold tracking-superwide text-richblack/40 uppercase">
+            <span className="text-[8px] sm:text-[10px] font-bold tracking-widest sm:tracking-superwide text-richblack/40 uppercase text-center px-4 mt-1 sm:mt-0">
               Tribal Cuisine
             </span>
 
