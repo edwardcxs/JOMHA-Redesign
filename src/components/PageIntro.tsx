@@ -57,6 +57,19 @@ export default function PageIntro() {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: phase === 'exit' ? 0 : 0.3 }}
             />
 
+            {/* Cloche Icon */}
+            <motion.img
+              src="/images/cloche.png"
+              alt="Cloche"
+              className="w-10 h-10 sm:w-14 sm:h-14 object-contain mb-4 sm:mb-6"
+              initial={{ opacity: 0, y: 15, scale: 0.8 }}
+              animate={{ opacity: phase === 'exit' ? 0 : 1, y: phase === 'exit' ? -15 : 0, scale: phase === 'exit' ? 0.9 : 1 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: phase === 'exit' ? 0.05 : 0.4 }}
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = 'none';
+              }}
+            />
+
             {/* Brand block */}
             <motion.div 
               className="flex flex-col items-center justify-center gap-2 sm:gap-4 px-4 sm:px-8"
