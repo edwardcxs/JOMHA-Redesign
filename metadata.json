@@ -1,0 +1,8 @@
+{
+  "name": "Remix: JOMHA — Re-design",
+  "description": "A premium landing page for a modern tribal gastronomy restaurant featuring ancestral fire-cooking techniques.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
