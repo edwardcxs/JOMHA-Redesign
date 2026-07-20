@@ -19,7 +19,7 @@ const teamRow1 = [
   { name: "Krishna Jha", role: "JOMHA Manager", image: "/images/team/krishna.jpeg" },
   { name: "Dinabandhu Soren", role: "Tribal Art Designer", image: "/images/team/dina.jpeg" },
   { name: "Gautam Halder", role: "Printing Media | Color Concept", image: "/images/team/gautam.jpeg" },
-  { name: "Hemant Gagrai", role: "Financial Advisor", image: "/images/team/hemant-gagrai.jpg" },
+  { name: "Hemant Gagrai", role: "Financial Advisor", image: "/images/team/hema.jpeg" },
   { name: "Sikandar Kumar", role: "Head Chef", image: "/images/team/sikandar kumar.jpeg" },
   { name: "Sinu Bhoi", role: "Kitchen Staff", image: "/images/team/sinu bhoi.jpeg" },
 ];
