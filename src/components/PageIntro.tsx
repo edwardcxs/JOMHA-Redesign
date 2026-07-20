@@ -11,10 +11,10 @@ export default function PageIntro() {
   const [phase, setPhase] = useState<'logo' | 'exit'>('logo');
 
   useEffect(() => {
-    // Show logo for 1.4s, then trigger exit animation
-    const logoTimer = setTimeout(() => setPhase('exit'), 1400);
-    // Unmount completely after exit animation finishes (~700ms)
-    const doneTimer = setTimeout(() => setVisible(false), 2100);
+    // Show logo for 2s, then trigger exit animation
+    const logoTimer = setTimeout(() => setPhase('exit'), 2000);
+    // Unmount completely after exit animation finishes (1000ms)
+    const doneTimer = setTimeout(() => setVisible(false), 3000);
     return () => {
       clearTimeout(logoTimer);
       clearTimeout(doneTimer);
@@ -31,7 +31,7 @@ export default function PageIntro() {
           animate={phase === 'exit' ? { y: '-100%' } : { y: 0 }}
           transition={
             phase === 'exit'
-              ? { duration: 0.7, ease: [0.76, 0, 0.24, 1] }
+              ? { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
               : { duration: 0 }
           }
         >
@@ -44,35 +44,50 @@ export default function PageIntro() {
 
           {/* Logo block */}
           <motion.div
-            className="flex flex-col items-center gap-3 select-none"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: phase === 'exit' ? 0 : 1, y: phase === 'exit' ? -16 : 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut', delay: phase === 'logo' ? 0.15 : 0 }}
+            className="flex flex-col items-center select-none"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: phase === 'exit' ? 0 : 1, scale: phase === 'exit' ? 1.05 : 1 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           >
             {/* Top rule */}
             <motion.span
-              className="w-8 h-[1px] bg-richblack/60"
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
+              className="w-full h-[1px] bg-terracotta/50 mb-6 sm:mb-8"
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: phase === 'exit' ? 0 : 1, opacity: phase === 'exit' ? 0 : 1 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: phase === 'exit' ? 0 : 0.3 }}
             />
 
-            {/* Brand name */}
-            <span className="text-xl sm:text-3xl md:text-5xl font-bold tracking-widest sm:tracking-megawide text-richblack leading-tight sm:leading-none uppercase text-center px-4">
-              Welcome To JOMHA
-            </span>
+            {/* Brand block */}
+            <motion.div 
+              className="flex flex-col items-center justify-center gap-2 sm:gap-4 px-4 sm:px-8"
+              initial={{ opacity: 0, filter: 'blur(8px)', y: 20 }}
+              animate={{ opacity: phase === 'exit' ? 0 : 1, filter: phase === 'exit' ? 'blur(8px)' : 'blur(0px)', y: phase === 'exit' ? -20 : 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: phase === 'exit' ? 0.1 : 0.5 }}
+            >
+              <span className="text-[9px] sm:text-xs font-medium tracking-[0.4em] sm:tracking-[0.6em] text-richblack/60 uppercase">
+                Welcome To
+              </span>
+              <span className="text-4xl sm:text-6xl md:text-7xl font-light tracking-widest text-richblack uppercase leading-none">
+                JOMHA
+              </span>
+            </motion.div>
 
             {/* Tagline */}
-            <span className="text-[8px] sm:text-[10px] font-bold tracking-widest sm:tracking-superwide text-richblack/40 uppercase text-center px-4 mt-1 sm:mt-0">
+            <motion.span 
+              className="text-[8px] sm:text-[10px] font-bold tracking-[0.4em] sm:tracking-[0.6em] text-terracotta uppercase text-center mt-6 sm:mt-8 mb-6 sm:mb-8"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: phase === 'exit' ? 0 : 1, y: phase === 'exit' ? -15 : 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: phase === 'exit' ? 0.15 : 0.6 }}
+            >
               Tribal Cuisine
-            </span>
+            </motion.span>
 
             {/* Bottom rule */}
             <motion.span
-              className="w-8 h-[1px] bg-richblack/60"
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.5, delay: 0.5, ease: 'easeOut' }}
+              className="w-full h-[1px] bg-terracotta/50"
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: phase === 'exit' ? 0 : 1, opacity: phase === 'exit' ? 0 : 1 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: phase === 'exit' ? 0.2 : 0.7 }}
             />
           </motion.div>
 

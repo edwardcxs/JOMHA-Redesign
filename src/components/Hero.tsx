@@ -43,10 +43,20 @@ export default function Hero() {
         {/* Left Side Content */}
         <div className="lg:col-span-6 flex flex-col justify-center space-y-8 sm:space-y-10 text-center lg:text-left items-center lg:items-start">
 
-          <div className="flex items-center gap-3">
-            <span className="w-6 h-[1px] bg-terracotta/60"></span>
-            <span className="text-[8px] sm:text-[9px] font-bold tracking-superwide text-terracotta uppercase">Inspired by Nature, Crafted with Tradition.</span>
-            <span className="w-6 h-[1px] bg-terracotta/60 lg:hidden"></span>
+          <div className="flex flex-col items-center lg:items-start">
+            <img 
+              src="/images/woman.png" 
+              alt="Namaste Greeting" 
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain mb-4 lg:hidden" 
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = 'none';
+              }}
+            />
+            <div className="flex items-center gap-3">
+              <span className="w-6 h-[1px] bg-terracotta/60"></span>
+              <span className="text-[8px] sm:text-[9px] font-bold tracking-superwide text-terracotta uppercase">Inspired by Nature, Crafted with Tradition.</span>
+              <span className="w-6 h-[1px] bg-terracotta/60 lg:hidden"></span>
+            </div>
           </div>
 
           <div className="space-y-4 w-full">
